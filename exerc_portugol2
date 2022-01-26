@@ -1,0 +1,50 @@
+programa
+{//por Isabel Cruz
+/*Situação-problema: Contratação de equipe de bufet para evento em hotel
+ * Cada garçom custa R$ 10,50 por hora, sendo um dos garçons da equipe coordenador 
+ * dos demais e, por isso, recebe R$ 12,00 por hora. 
+ * Solução: algoritmo que recebe o número de garçons necessários e o total de horas 
+ * do evento, incluindo cálculo do custo total com a contratação.  
+ * O algoritmo garante que serão informados sempre valores >= 1.  
+ */
+	funcao inicio()
+	{
+		inteiro horasEvento=0, numGar=0, numMait= 1
+		//Optei por criar um maitre para diferenciar o valor da hora trabalhada
+		
+		const real HORASALGAR = 10.5
+		const real HORASALMAIT = 12.00
+		//como este algoritmo será usado em outros exercícios, criei estas constantes
+		
+		real custoTotal //variável custoTotal recebe o resultado da operação aritmética
+		
+		
+			escreva("Qual o número de horas do evento? ")
+			leia(horasEvento)
+			
+		se(horasEvento < 1) //Serão informados sempre valores >= 1
+		{	
+			escreva("Informação inválida. Digite novamente: ")
+			leia(horasEvento)				
+		}
+
+		escreva("Qual o número de garçons do evento? ")
+		leia(numGar)
+		
+		se(numGar < 1 ) //Serão informados sempre valores >= 1
+		{
+			escreva("Informação inválida. Digite novamente: ")
+			leia(numGar)
+		}		
+		
+		//processamento
+		inteiro equipeGar
+		equipeGar = numGar-numMait	
+		
+         custoTotal = horasEvento * ((equipeGar*HORASALGAR)+(numMait*HORASALMAIT))
+         //Cálculo do custo de uma equipe (garçons e maitre) por evento 
+         escreva("O valor total da contratação de \n", numGar, " garçons, sendo ", numMait, " maitre é R$", custoTotal)
+
+		
+	}
+}
