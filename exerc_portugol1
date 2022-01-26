@@ -1,0 +1,52 @@
+programa
+{
+//por Isabel Cruz
+//Referência: Portugol Studio - UNIVALI – Universidade do Vale do Itajaí
+/*Situação-problema: Com base na situação anterior, é preciso contratar 
+ * 1 garçom/20 participantes  * mais o maitre para um evento com 10h de duração. 
+ * Porém, se o número de participantes for menor que 20, contratar apenas 1 garçom. 
+ * 
+ */
+	funcao inicio()
+	{
+		inteiro horasEvento=0, numGar=0, numMait=1, numConvid=0
+		//Optei por criar um maitre para diferenciar o valor da hora trabalhada
+		//E também temos 1 maitre para cada 3 garçons
+		inteiro equipGar = 0
+		const inteiro MINCONVID = 20
+		const real HORASALGAR = 10.5
+		const real HORASALMAIT = 12.00
+		//como este algoritmo será usado em outros exercícios, criei estas constantes
+		
+		real custoTotal //variável custoTotal recebe o resultado da operação aritmética
+		
+		escreva("Qual o número de horas do evento? ")
+		leia(horasEvento)
+
+		se(horasEvento < 1)  //Serão informados sempre valores >= 1
+		{
+			escreva("Informação inválida. Digite novamente: ")
+			leia(horasEvento)
+		}
+
+		escreva("Qual o número de convidados do evento? ")
+		leia(numConvid)
+
+		enquanto(numConvid <= 20)
+		{
+			escreva("Para ", MINCONVID, " ou menos, contrata-se 1 garçon \n ao custo de R$ " , (HORASALGAR*horasEvento))
+			pare
+		}
+		
+		//processamento
+		numGar= (numConvid/20)
+		equipGar = numGar-numMait
+		 		
+		custoTotal = horasEvento * ((equipGar*HORASALGAR)+(numMait*HORASALMAIT))
+
+		escreva("O valor total da contratação de \n", equipGar, " garçons, sendo ", numMait, " maitre é R$", custoTotal)
+          
+         
+		
+	}
+}
