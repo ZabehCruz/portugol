@@ -1,0 +1,49 @@
+
+/* Pensando um algoritmo para a PNSIPN
+
+ */
+
+programa 
+{
+	funcao inicio()
+	{
+		inteiro res_br, res_pt, res_pd
+		
+		escreva ("Informe o resultado (taxa) da pop autodeclarada branca: ")
+		leia (res_br)
+
+		escreva ("Informe o resultado (taxa) da pop autodeclarada preta: ")
+		leia (res_pt)
+
+		escreva ("Informe o resultado (taxa) da pop autodeclarada parda: ")
+		leia (res_pd)
+
+		se (res_br == res_pt e res_br == res_pd)
+		{
+			// Se os três resultados (taxas) forem iguais em princípio há equidade
+			
+			escreva ("\nHá equidade em saúde\n")
+		}
+		senao 
+		{
+			// Se chegou aqui é porque os três resultados (taxas) não são iguais
+			
+			
+			se (res_br == res_pt ou res_pt == res_pd ou res_pd == res_br)
+			{
+				escreva ("\nHá diferenças a serem investigadas\n")
+			}
+			senao
+			{
+				escreva ("\nSugestivo de iniquidade. Expandir a análise para escolaridade\n")
+			}
+		}
+		// Desenvolvendo a ideia dos laços
+		// se (escolaridade_br == escolaridade_pt  e res_br == res_pt) 
+		//    escreva("sugere equidade")
+		// senao
+		//    escreva("indicativo de iniquidade")
+		// 2o laço:  escolaridade_br == escolaridade_pd
+	}
+}
+
