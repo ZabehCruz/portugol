@@ -1,5 +1,8 @@
 
 /* Pensando um algoritmo para a PNSIPN
+Medindo desigualdades
+Razão = 1 não há associação
+Diferença = 0 não há associação do resultado com o racismo (em princípio)
 
  */
 
@@ -38,12 +41,37 @@ programa
 				escreva ("\nSugestivo de iniquidade. Expandir a análise para escolaridade\n")
 			}
 		}
-		// Desenvolvendo a ideia dos laços
+		/*
+		Escolaridade: indicador plausível para medição de desigualdades
+		Brasil. Ministério da Saúde. Asis - Análise de Situação de Saúde / Ministério da Saúde, 
+		Universidade Federal de Goiás. – Brasília : Ministério da Saúde, 2015. vol 1, pag 133
+		Hipótese alternativa: a escolaridade não protege contra a discriminação por cor
+		 
+		Desenvolvendo a ideia dos laços
 		// se (escolaridade_br == escolaridade_pt  e res_br == res_pt) 
 		//    escreva("sugere equidade")
 		// senao
 		//    escreva("indicativo de iniquidade")
 		// 2o laço:  escolaridade_br == escolaridade_pd
+		 
+		 preparando futuras funções com retorno
+		 se (condição [ razão = 1 e/ou diferença = 0]) {
+		 ...escreva("equidade")
+		 } senao {
+		 ...escreva("iniquidade")
+		 }
+		
+		preparando mais funções
+		se (condição1 [escolaridade >= 12 anos]) {
+		...leia(retorno_escolaridade)
+		} senao se (condição2 [razão = 1 e/ou diferença = 0]) {
+		...leia(retorno_razão){
+		...escreva("equidade")
+		} senao {
+		...escreva("niquidade")
+		}
+		*/
 	}
 }
+
 
